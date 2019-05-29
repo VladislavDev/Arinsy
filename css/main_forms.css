@@ -1,0 +1,65 @@
+.LogInFormDialog{
+    position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+	z-index: 99999;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	display: none;
+	pointer-events: none;
+}
+.LogInFormDialog:target {
+	display: block;
+	pointer-events: auto;
+}
+.LogInFormDialog > div {
+	width: 300px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	background: #fff;
+}
+.LogInFormBody{
+    background: linear-gradient(to top right, #fff, rgb(230, 230, 230)) !important;
+	width: 300px;
+	height: 200px;
+    top: 50px;
+    border: 2px solid #333;
+    border-radius: 4px;
+}
+.LogInFormClose{
+	color: rgb(216, 216, 216);
+	line-height: 25px;
+	position: absolute;
+	right: 12px;
+	text-align: center;
+	top: 10px;
+	width: 24px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.LogInFormClose:hover{
+    color: rgb(80, 80, 80);
+}
+.LogInForm{
+    margin-top: 30px;
+    margin-left: 20px;
+}
+.LIF_label{
+    color: #333;
+    font-weight: bold;
+}
+.LIF_input{
+    width: 250px;
+    height: 20px;
+    margin-top: 15px;
+    border-radius: 3px;
+}
+.LIF_input:focus{
+    outline: none;
+}

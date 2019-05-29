@@ -1,0 +1,7 @@
+.footer{
+    margin-top: 50px;
+    width: 98%;
+    height: 10%;
+    background: linear-gradient(to top right, #555555, #686868);
+    padding: 1%;
+}

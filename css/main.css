@@ -8,7 +8,7 @@ body{
 .info-body{
     width: 96%;
     margin: 2%;
-    height: 20%;
+    margin-bottom: 50px;
 }
 H1{
     font-size: 36;
@@ -26,4 +26,7 @@ H3{
 }
 .blue{
     color: #7238a8;
+}
+a{
+    text-decoration: none;
 }
