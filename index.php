@@ -44,7 +44,6 @@
         </form>
     </div>
 </div>
-Misha
 
 <?php
     include $_SERVER["DOCUMENT_ROOT"]."/Arinsy/core/footer.php";
