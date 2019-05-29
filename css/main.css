@@ -11,17 +11,18 @@ body{
     margin-bottom: 50px;
 }
 H1{
-    font-size: 36;
+    font-size: 28pt;
     color: #b85084;
     margin-bottom: 15px;
 }
 .AAP_info{
     margin-left: 15px;
-    font-size: 18;
+    font-size: 14pt;
     text-align: justify;
     color: #333;
 }
 H3{
+    font-size: 16pt;
     color: #f72525;
 }
 .blue{

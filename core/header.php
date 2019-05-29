@@ -2,6 +2,7 @@
     //prolog file including
     include_once $_SERVER["DOCUMENT_ROOT"]."/Arinsy/core/prolog.php";
 ?>
+<!DOCTYPE html>
 
 <html>
     <head>
