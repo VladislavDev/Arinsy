@@ -9,8 +9,8 @@
         <title>Arinsy</title>
 
         <meta charset="utf-8">
-        <meta name="description" content="CRM for your business">
-        <meta name="keywords" lang="en" content="CRM, business-process">
+        <meta name="description" content="<?php echo  $MESS['site_description']; ?>">
+        <meta name="keywords" lang="en" content="<?php echo  $MESS['site_keywords']; ?>">
 
         <!-- including of main css files -->
         <?php
@@ -24,7 +24,7 @@
 
     </head>
 
-    
+
     <body>
         <!-- the block caps of the website -->
         <div class="header">
