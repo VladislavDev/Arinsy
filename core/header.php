@@ -15,20 +15,22 @@
         <!-- including of main css files -->
         <?php
             //getting a list of files
-            $arCSSFiles = scandir(MAIN_STYLES);
+            $arCSSFiles = scandir($PHP_DIRS['MAIN_STYLES']);
             //including each file from the list
 			for ($i = 2; $i < count($arCSSFiles); $i++){
-				echo '<link rel="stylesheet" href="css/'.$arCSSFiles[$i].'" type="text/css"/>';
+				echo '<link rel="stylesheet" href="'.$CONTENT_DIRS['MAIN_STYLES'].$arCSSFiles[$i].'" type="text/css"/>';
             }
 		?>
 
     </head>
+
+    
     <body>
         <!-- the block caps of the website -->
         <div class="header">
             <div class="logo-container">
                 <img
-                    src="content/main/logo.png"
+                    src="<?php echo $CONTENT_DIRS['MAIN_CONTENT']; ?>logo.png"
                     class="img_in_container"
                 />
             </div>
