@@ -15,16 +15,30 @@
     
     //The including component function
     function INCLUDE_COMPONENT($nameComponent, $template, $arParams){
-        global $PHP_DIRS;
+        global $PHP_DIRS, $CONTENT_DIRS;
         list($org, $comp) = explode(":", $nameComponent, 2);
         
         if(!(isset($template) && strlen($template) > 0)){
             $template = ".default";
         }
 
-        $workspace = $PHP_DIRS['COMPONENTS'].$org.'/'.$comp.'/'.$template.'/';
+        $workspace = $PHP_DIRS['COMPONENTS'].$org.'/'.$comp.'/templates/'.$template.'/';
 
-        echo $workspace;
+        if (file_exists($workspace.'result_modifier.php')){
+            include $workspace.'result_modifier.php';
+        }
+        include $workspace.'template.php';
+        if (file_exists($workspace.'component_epilog.php')){
+            include $workspace.'component_epilog.php';
+        }
+
+        if (is_dir($workspace.'css')){
+            $arCSSFiles = scandir($workspace.'css');
+            $css_workspace = $CONTENT_DIRS['COMPONENTS'].$org.'/'.$comp.'/templates/'.$template.'/css/';
+            for ($i = 2; $i < count($arCSSFiles); $i++){
+                echo '<link rel="stylesheet" href="'.$css_workspace.$arCSSFiles[$i].'" type="text/css"/>';
+            }
+        }
     }
 
     //The pagetitle rename function

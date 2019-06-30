@@ -26,6 +26,7 @@
     $CONTENT_DIRS['MAIN_STYLES']    = $CONTENT_DIRS['SITE_NAME'].'css/';
     $CONTENT_DIRS['CONTENT_DIR']    = $CONTENT_DIRS['SITE_NAME'].'content/';
     $CONTENT_DIRS['MAIN_CONTENT']   = $CONTENT_DIRS['CONTENT_DIR'].'main/';
+    $CONTENT_DIRS['COMPONENTS']     = $CONTENT_DIRS['SITE_NAME'].'Components/';
 
     //                              *** Functions ****
     function Arinsy_cript($str){
