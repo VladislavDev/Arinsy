@@ -7,7 +7,19 @@
 
 <div class="workspace">
     <?php
-        INCLUDE_COMPONENT("Arinsy:Menu-top", "", array());
+        INCLUDE_COMPONENT( 
+            "Arinsy:Menu-top",
+            "",
+            array(
+                "CHILD_COMPONENTS" => array(
+                    array(
+                        "Component" => "Arinsy:Menu-left",
+                        "Template" => "ForMainTop",
+                        "Params" => array()
+                    )
+                )
+            )
+        );
     ?>
 </div>
 
