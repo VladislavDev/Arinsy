@@ -24,7 +24,7 @@
 
     </head>
 
-
+    
     <body>
         <!-- the block caps of the website -->
         <div class="header">

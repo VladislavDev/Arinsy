@@ -1,8 +1,9 @@
 <?php
     include $_SERVER["DOCUMENT_ROOT"]."/Arinsy/core/header.php";
 ?>
-
-
+<script>
+    var user_name = "<?php echo $USER['login']; ?>";
+</script>
 <div class="info-body">
     <div class="about_a_project">
         <h1>Arinsy</h1>
@@ -41,6 +42,8 @@
             <input type="text" class="LIF_input" name="Arinsy_Login" placeholder="Login or E-mail" required/>
             <br/>
             <input type="password" class="LIF_input" name="Arinsy_Pswd" placeholder="Password" required/>
+            
+            <input type="submit" name="submit" class="LogIn_postform">
         </form>
     </div>
 </div>

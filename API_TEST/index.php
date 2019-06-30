@@ -28,5 +28,25 @@
 
             echo ($year * 12 + $mon);   // Вернуть кол-во месяцев выплаты кредита
             break;                      // Завершить выполнение
+        case 'md5-test':
+            $str    = $_REQUEST['str'];
+            $hash   = $_REQUEST['hash'];
+            
+            if ($hash === md5($str)){
+                echo json_encode(TRUE);
+            }else{
+                echo json_encode(FALSE);
+            }
+            break;
+        case 'sha1-test':
+            $str    = $_REQUEST['str'];
+            $hash   = $_REQUEST['hash'];
+            
+            if ($hash === sha1($str)){
+                echo json_encode(TRUE);
+            }else{
+                echo json_encode(FALSE);
+            }
+            break;
     }
 ?>

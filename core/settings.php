@@ -15,6 +15,7 @@
     $PHP_DIRS['CONTENT_DIR']    = $PHP_DIRS['SITE_NAME'].'content/';
     $PHP_DIRS['MAIN_CONTENT']   = $PHP_DIRS['CONTENT_DIR'].'main/';
     $PHP_DIRS['MAIN_LANG']      = $PHP_DIRS['SITE_NAME'].'Lang/';
+    $PHP_DIRS['CORE']           = $PHP_DIRS['SITE_NAME'].'Core/';
   
 
     //                            *** Folders Content ***
@@ -25,6 +26,9 @@
     $CONTENT_DIRS['CONTENT_DIR']    = $CONTENT_DIRS['SITE_NAME'].'content/';
     $CONTENT_DIRS['MAIN_CONTENT']   = $CONTENT_DIRS['CONTENT_DIR'].'main/';
 
-
+    //                              *** Functions ****
+    function Arinsy_cript($str){
+        return md5($str);
+    }
     $Lang = 'EN';
 ?>
