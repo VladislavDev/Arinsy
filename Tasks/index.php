@@ -1,9 +1,6 @@
 <?php
     include $_SERVER["DOCUMENT_ROOT"]."/Arinsy/core/header.php";
 ?>
-<script>
-    var user_name = "<?php echo $USER['login']; ?>";
-</script>
 
 <div class="workspace">
     <?php
@@ -19,12 +16,12 @@
                             "Buttons" => array(
                                 array(
                                     "Name" => "Desktop",
-                                    "HREF" => "#",
-                                    "Active" => "Y"
+                                    "HREF" => "#"
                                 ),
                                 array(
                                     "Name" => "Tasks",
-                                    "HREF" => $CONTENT_DIRS["SITE_NAME"].'Tasks'
+                                    "HREF" => $CONTENT_DIRS["SITE_NAME"].'Tasks',
+                                    "Active" => "Y"
                                 ),
                                 array(
                                     "Name" => "Projects",

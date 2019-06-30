@@ -5,3 +5,9 @@
     border-top: 1px solid rgb(185, 180, 190);
     border-bottom: 1px solid rgb(185, 180, 190);
 }
+.open_left_button{
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    cursor: pointer;
+}

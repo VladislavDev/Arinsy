@@ -21,12 +21,22 @@
 			for ($i = 2; $i < count($arCSSFiles); $i++){
 				echo '<link rel="stylesheet" href="'.$CONTENT_DIRS['MAIN_STYLES'].$arCSSFiles[$i].'" type="text/css"/>';
             }
-		?>
+        ?>
 
+        <?php
+            //getting a list of files
+            $arJSLibsFiles = scandir($PHP_DIRS['MAIN_JS'].'Libs');
+            //including each file from the list
+			for ($i = 2; $i < count($arJSLibsFiles); $i++){
+				echo '<script type="text/javascript" src="'.$CONTENT_DIRS['MAIN_JS'].'Libs/'.$arJSLibsFiles[$i].'"></script>';
+            }
+		?>
     </head>
 
     
     <body>
+        <!-- including of js libs -->
+        
         <!-- the block caps of the website -->
         <div class="header">
             <div class="logo-container">
