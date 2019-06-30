@@ -49,5 +49,5 @@
 </div>
 
 <?php
-    include $_SERVER["DOCUMENT_ROOT"]."/Arinsy/core/footer.php";
+    include $PHP_DIRS['CORE']."footer.php";
 ?>

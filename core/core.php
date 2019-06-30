@@ -14,8 +14,17 @@
     include_once $PHP_DIRS['CORE'].'Auth.php';
     
     //The including component function
-    function INCLUDE_COMPONENT(){
-        //None
+    function INCLUDE_COMPONENT($nameComponent, $template, $arParams){
+        global $PHP_DIRS;
+        list($org, $comp) = explode(":", $nameComponent, 2);
+        
+        if(!(isset($template) && strlen($template) > 0)){
+            $template = ".default";
+        }
+
+        $workspace = $PHP_DIRS['COMPONENTS'].$org.'/'.$comp.'/'.$template.'/';
+
+        echo $workspace;
     }
 
     //The pagetitle rename function

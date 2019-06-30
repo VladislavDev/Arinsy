@@ -16,6 +16,7 @@
     $PHP_DIRS['MAIN_CONTENT']   = $PHP_DIRS['CONTENT_DIR'].'main/';
     $PHP_DIRS['MAIN_LANG']      = $PHP_DIRS['SITE_NAME'].'Lang/';
     $PHP_DIRS['CORE']           = $PHP_DIRS['SITE_NAME'].'Core/';
+    $PHP_DIRS['COMPONENTS']     = $PHP_DIRS['SITE_NAME'].'Components/';
   
 
     //                            *** Folders Content ***

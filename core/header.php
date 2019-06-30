@@ -12,6 +12,7 @@
         <meta name="description" content="<?php echo  $MESS['site_description']; ?>">
         <meta name="keywords" lang="en" content="<?php echo  $MESS['site_keywords']; ?>">
 
+        <link rel="shortcut icon" href="<?php echo $CONTENT_DIRS['MAIN_CONTENT'].'favicon.ico';?>" type="image/x-icon">
         <!-- including of main css files -->
         <?php
             //getting a list of files
