@@ -68,6 +68,7 @@
                         $USER['session']    = $UserFields["Password"];
                         $USER['group']      = $UserFields["Group"];
                         $USER['id']         = $UserFields["Id"];
+                        $USER['Name']       = substr($UserFields["First Name"], 0, 1).". ".$UserFields["Last Name"];
                     }else{
                         User_undefined();
                     }

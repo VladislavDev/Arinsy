@@ -8,3 +8,17 @@
     font-size: 24pt;
     margin-bottom: 15px;
 }
+.TaskTable{
+    border: 1px solid #000;
+    text-align: left;
+}
+.TT_Headers{
+    font-size: 14pt;
+    color: rgb(206, 182, 204);
+    background: linear-gradient(to right top, rgb(70, 37, 92), rgb(110, 38, 110));
+}
+.TT_Header_th{
+    padding: 3px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
