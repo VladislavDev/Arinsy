@@ -16,11 +16,11 @@
                             "Buttons" => array(
                                 array(
                                     "Name" => "Desktop",
-                                    "HREF" => "#"
+                                    "HREF" => $CONTENT_DIRS["SITE_NAME"].'Desktop'
                                 ),
                                 array(
                                     "Name" => "Tasks",
-                                    "HREF" => $CONTENT_DIRS["SITE_NAME"].'Tasks',
+                                    "HREF" => "#",
                                     "Active" => "Y"
                                 ),
                                 array(
@@ -33,6 +33,11 @@
                 )
             )
         );
+        INCLUDE_COMPONENT(
+            "Arinsy:TaskList",
+            "",
+            array()
+        )
     ?>
 </div>
 

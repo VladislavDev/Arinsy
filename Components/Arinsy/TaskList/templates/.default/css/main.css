@@ -1,0 +1,10 @@
+.TaskList{
+    float: left;
+    margin: 20px;
+}
+.TaskListName{
+    color: rgb(78, 44, 97);
+    font-weight: bold;
+    font-size: 24pt;
+    margin-bottom: 15px;
+}

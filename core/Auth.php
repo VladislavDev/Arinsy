@@ -9,6 +9,7 @@
         unset($_COOKIE["Arinsy_login"]);
         unset($_COOKIE["Arinsy_pswd"]);
 
+        $USER['id']         = 'undefined';
         $USER['login']      = 'undefined';
         $USER['session']    = 'undefined';
     }
@@ -31,6 +32,7 @@
             if($data['Password'] === Arinsy_cript($_POST['Arinsy_Pswd'])){
                 setcookie("Arinsy_login", $data['Login'], time()+60*60*24*30);
                 setcookie("Arinsy_pswd", $data['Password'], time()+60*60*24*30);
+                setcookie("Arinsy_id", $data['Id'], time()+60*60*24*30);
                 
                 header("Location: ".$CONTENT_DIRS['SITE_NAME'].'Desktop'); exit();
             }
@@ -65,6 +67,7 @@
                         $USER['login']      = $UserFields["Login"];
                         $USER['session']    = $UserFields["Password"];
                         $USER['group']      = $UserFields["Group"];
+                        $USER['id']         = $UserFields["Id"];
                     }else{
                         User_undefined();
                     }
