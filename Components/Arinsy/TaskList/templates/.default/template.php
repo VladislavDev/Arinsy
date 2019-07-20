@@ -15,14 +15,25 @@
                 foreach($userTasks as $Task){
                     ?>
                     <tr>
-                        <th><?php echo $Task['Name']; ?>                                            </th>
-                        <th><?php echo $Task['Deadline']; ?>                                        </th>
-                        <th><?php echo $Task['Creator']; ?>                                         </th>
-                        <th><?php echo $Task['Statement']; ?>                                       </th>
+                        <td
+                            onClick="openTaskDetail(<?php echo $Task['T_ID']; ?>);"
+                            class="openTaskDetail"
+                        >
+                            <?php echo $Task['T_Name']; ?>
+                        </td>
+                        <td><?php echo $Task['Deadline']; ?>                                        </td>
+                        <td><?php echo $Task['Creator']; ?>                                         </td>
+                        <td><?php echo $Task['Statement']; ?>                                       </td>
                     </tr>
                     <?php
                 }
             ?>
         </table>
+    </div>
+</div>
+
+<div class="TaskDetail_div">
+    <div class="TD_Name">
+        777
     </div>
 </div>

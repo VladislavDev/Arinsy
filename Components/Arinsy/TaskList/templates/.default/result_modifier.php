@@ -6,7 +6,14 @@
 
 
     $query_text = " SELECT
-                        *
+                        tasks.Deadline,
+                        tasks.Statement_Date,
+                        users.`First Name`,
+                        users.`Last Name`,
+                        users.Id,
+                        tasks.Creator,
+                        tasks.Id AS T_ID,
+                        tasks.Name AS T_Name
                     FROM
                         tasks
                     INNER JOIN
@@ -26,4 +33,36 @@
         $userTasks[$key]['Deadline'] = date("d.m.Y", strtotime($Task['Deadline']));
         $userTasks[$key]['Statement'] = date("d.m.Y", strtotime($Task['Statement_Date']));
     }
+
+    ?>
+    <script>
+        var openTD = false;
+        var TD_Id = 0;
+        function toOpenTD(i){
+            $.ajax({
+                url: "<?php echo $CONTENT_DIRS['AJAX'].'TaskDetail.php'; ?>",
+                method: 'POST',
+                data: {t: i},
+                success: function(data){
+                    $('.TaskDetail_div').html(data);
+                    $('.TaskDetail_div').css('display', 'block');
+                    openTD = true;
+                    TD_Id = i;
+                }
+            })
+        }
+        function toCloseTD(){
+            $('.TaskDetail_div').css('display', 'none');
+            openTD = false;
+        }
+        function openTaskDetail(i){
+            if(openTD){
+                toCloseTD();
+            }else{
+                toOpenTD(i);
+            }
+            
+        }
+    </script>
+    <?
 ?>

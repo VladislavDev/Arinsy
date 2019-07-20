@@ -9,7 +9,6 @@
     margin-bottom: 15px;
 }
 .TaskTable{
-    border: 1px solid #000;
     text-align: left;
 }
 .TT_Headers{
@@ -21,4 +20,36 @@
     padding: 3px;
     padding-right: 5px;
     padding-left: 5px;
+}
+tr{
+    background: linear-gradient(to right top, rgb(232, 205, 233), rgb(253, 219, 249));
+}
+.openTaskDetail{
+    color: #000;
+    cursor: pointer;
+}
+.openTaskDetail:hover{
+    color: rgb(88, 36, 94);
+}
+.TaskDetail_div{
+    top: 175px;
+    width: 40%;
+    height: 300px;
+    position: absolute;
+    left: 60%;
+    background: linear-gradient(to bottom right, rgb(224, 203, 231), rgb(236, 183, 252));
+    outline: 2px solid rgb(223, 145, 253);
+    display: none;
+}
+.TD_Name{
+    margin: 10px;
+    font-size: 18pt;
+    color: rgb(141, 57, 141);
+    text-align: justify;
+}
+.TD_Desc{
+    margin: 15px;
+    margin-top: 0;
+    font-size: 11pt;
+    color: rgb(90, 29, 90);
 }

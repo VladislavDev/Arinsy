@@ -27,6 +27,7 @@
     $CONTENT_DIRS['CONTENT_DIR']    = $CONTENT_DIRS['SITE_NAME'].'content/';
     $CONTENT_DIRS['MAIN_CONTENT']   = $CONTENT_DIRS['CONTENT_DIR'].'main/';
     $CONTENT_DIRS['COMPONENTS']     = $CONTENT_DIRS['SITE_NAME'].'Components/';
+    $CONTENT_DIRS['AJAX']           = $CONTENT_DIRS['SITE_NAME'].'Ajax/';
 
     //                              *** Functions ****
     function Arinsy_cript($str){
