@@ -32,24 +32,62 @@ tr{
     color: rgb(88, 36, 94);
 }
 .TaskDetail_div{
-    top: 175px;
-    width: 40%;
-    height: 300px;
+    top: 60px;
+    width: 0;
     position: absolute;
-    left: 60%;
+    left: 100%;
     background: linear-gradient(to bottom right, rgb(224, 203, 231), rgb(236, 183, 252));
-    outline: 2px solid rgb(223, 145, 253);
     display: none;
 }
 .TD_Name{
     margin: 10px;
-    font-size: 18pt;
+    font-size: 20pt;
     color: rgb(141, 57, 141);
     text-align: justify;
 }
+.TD_Close{
+    margin: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 20pt;
+    color: rgb(216, 153, 216);
+    cursor: pointer;
+    font-weight: bold;
+}
+.TD_Close:hover{
+    color: rgb(141, 57, 141);
+}
 .TD_Desc{
-    margin: 15px;
+    margin: 20px;
     margin-top: 0;
-    font-size: 11pt;
+    font-size: 14pt;
+    color: rgb(112, 45, 112);
+}
+.TDDesc_name{
+    font-size: 18pt;
+    margin: 10px;
     color: rgb(90, 29, 90);
+}
+.TD_Body{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 10px;
+    margin-top: 0;
+    background: linear-gradient(to bottom right, rgb(247, 244, 248), rgb(233, 220, 233));
+    outline: 2px solid rgb(223, 145, 253);
+}
+.TD_Deadline{
+    margin: 20px;
+    margin-top: 0;
+    margin-left: 0;
+    font-size: 14pt;
+    color: rgb(112, 45, 112);
+    display: inline-flex;
+}
+.TDDead_name{
+    font-size: 18pt;
+    margin-top: 0;
+    margin: 10px;
+    color: rgb(90, 29, 90);
+    display: inline-flex;
 }

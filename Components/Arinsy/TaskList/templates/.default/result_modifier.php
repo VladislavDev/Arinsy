@@ -38,30 +38,94 @@
     <script>
         var openTD = false;
         var TD_Id = 0;
+        var TD_width = 0;
+        var TD_left = 100;
+        function TDOpenProcess(i, d){
+            TD_width += 2;
+            TD_left -= 2;
+            $('.TaskDetail_div').css('left', TD_left+'%');
+            $('.TaskDetail_div').css('width', TD_width+'%');
+            if (TD_width < 40){
+                if(TD_width == 10){
+                    $('.TaskDetail_div').html(d);
+                }
+                setTimeout(TDOpenProcess, 6, i, d);
+            }else{
+                $('.TaskDetail_div').css('outline', '2px solid rgb(223, 145, 253)');
+                openTD = true;
+                TD_Id = i;
+            }
+        }
+        function TDCloseProcess(){
+            TD_width -= 2;
+            TD_left += 2;
+            $('.TaskDetail_div').css('left', TD_left+'%');
+            $('.TaskDetail_div').css('width', TD_width+'%');
+            if (TD_width > 0){
+                if(TD_width == 10){
+                    $('.TaskDetail_div').html('');
+                }
+                setTimeout(TDCloseProcess, 6);
+            }else{
+                $('.TaskDetail_div').css('display', 'none');
+                openTD = false;
+            }
+        }
         function toOpenTD(i){
             $.ajax({
                 url: "<?php echo $CONTENT_DIRS['AJAX'].'TaskDetail.php'; ?>",
                 method: 'POST',
                 data: {t: i},
                 success: function(data){
-                    $('.TaskDetail_div').html(data);
                     $('.TaskDetail_div').css('display', 'block');
-                    openTD = true;
-                    TD_Id = i;
+                    TDOpenProcess(i,data);
                 }
             })
         }
+        function TDNOpenProcess(i){
+            TD_width += 2;
+            TD_left -= 2;
+            $('.TaskDetail_div').css('left', TD_left+'%');
+            $('.TaskDetail_div').css('width', TD_width+'%');
+            if (TD_width < 40){
+                setTimeout(TDNOpenProcess, 6,i);
+            }else{
+                TD_Id = i;
+            }
+        }
+        function TDReOpenProcess(i){
+            TD_width -= 2;
+            TD_left += 2;
+            $('.TaskDetail_div').css('left', TD_left+'%');
+            $('.TaskDetail_div').css('width', TD_width+'%');
+            if (TD_width > 10){
+                setTimeout(TDReOpenProcess, 6, i);
+            }else{
+                $.ajax({
+                    url: "<?php echo $CONTENT_DIRS['AJAX'].'TaskDetail.php'; ?>",
+                    method: 'POST',
+                    data: {t: i},
+                    success: function(data){
+                        $('.TaskDetail_div').html(data);
+                        TDNOpenProcess(i);
+                    }
+                })
+            }
+        }
         function toCloseTD(){
-            $('.TaskDetail_div').css('display', 'none');
-            openTD = false;
+            $('.TaskDetail_div').css('outline', 'none');
+            TDCloseProcess();
         }
         function openTaskDetail(i){
             if(openTD){
-                toCloseTD();
+                if(i == TD_Id){
+                    toCloseTD();
+                }else{
+                    TDReOpenProcess(i)
+                }
             }else{
                 toOpenTD(i);
             }
-            
         }
     </script>
     <?
