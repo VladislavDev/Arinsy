@@ -91,3 +91,21 @@ tr{
     color: rgb(90, 29, 90);
     display: inline-flex;
 }
+
+.TD_Progress{
+    margin: 2%;
+    margin-top: 0;
+	width: 96%;
+	background-color: rgb(252, 180, 240);
+	border: 0;
+	height: 10px;
+	-webkit-border-radius: 10px;
+}
+.TD_Progress::-webkit-progress-bar{
+	background-color: #5963d223;
+	-webkit-border-radius: 10px;
+}
+.TD_Progress::-webkit-progress-value {
+	background-color: rgb(179, 107, 207);
+	-webkit-border-radius: 10px;
+}

@@ -48,4 +48,8 @@
         <div class="TD_Deadline">
             <?php echo $Task['Priority'].'%'; ?>
         </div>
+        <br/>
+        <div class="TDDead_name">Progress:</div>
+        <div class="TD_Deadline"><?php echo $Task['Progress'].'%'; ?></div>
+        <progress class="TD_Progress" max=100 value=<?php echo $Task['Progress']; ?>></progress>
     </div>
