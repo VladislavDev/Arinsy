@@ -1,5 +1,9 @@
 body{
     margin: 0;
+    height: 100%;
+}
+html{
+    width: 100%;
 }
 .img_in_container{
     width: 100%;
@@ -30,4 +34,11 @@ H3{
 }
 a{
     text-decoration: none;
+}
+.wrapper{
+    margin: 0 auto;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    width: 100%;
 }

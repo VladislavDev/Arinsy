@@ -37,12 +37,13 @@
     <body>
         <!-- including of js libs -->
         
+        <div class="wrapper">
         <!-- the block caps of the website -->
-        <div class="header">
-            <div class="logo-container">
-                <img
-                    src="<?php echo $CONTENT_DIRS['MAIN_CONTENT']; ?>logo.png"
-                    class="img_in_container"
-                />
+            <div class="header">
+                <div class="logo-container">
+                    <img
+                        src="<?php echo $CONTENT_DIRS['MAIN_CONTENT']; ?>logo.png"
+                        class="img_in_container"
+                    />
+                </div>
             </div>
-        </div>
